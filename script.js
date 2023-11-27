@@ -21,5 +21,11 @@ function popUp(){
   ex.addEventListener("click", () => {
     pop.classList.remove("add");
   });
+
+  document.addEventListener("keydown", (event)=> {
+    if(event.key === "Escape"){
+      pop.classList.remove("add");
+    }
+  })
 }
 popUp();

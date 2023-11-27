@@ -119,6 +119,8 @@ header .navbar {
   margin: 0 60%;
   background: #ededed;
   border-radius:10px;
+  transition: opacity 0.1s ease-in-out;
+  animation: scaleUp 0.5s ease-in-out;
 }
 
 .pup_up_end{
@@ -155,7 +157,9 @@ header .navbar {
 }
 
 .add{
+  background: rgba(red, green, blue, alpha);
   display: block;
+  opacity: 1;
 }
 
 .row_button input{
@@ -164,6 +168,21 @@ header .navbar {
   color:white;
 }
 
+.row_button input:hover{
+  background: #212F3C;
+  box-shadow: #23201e 1px 1px 2px 2px;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 
 @media (max-width: 768px) {
@@ -225,5 +244,11 @@ header .navbar {
   
   .hero-section .content button {
     padding: 9px 18px;
+  }
+
+  .pup_up{
+    width: 370px;
+    height: 310px;
+    margin: 0 0%;
   }
 }
