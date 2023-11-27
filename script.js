@@ -29,3 +29,61 @@ function popUp(){
   })
 }
 popUp();
+
+
+
+
+const forms = document.querySelectorAll('form');
+
+const message = {
+  loading : 'Загрузка',
+  success : 'Спасибо! Скоро мы с вами свяжемся',
+  failure : 'Что то пошло не так...'
+ } 
+
+ forms.forEach(item => {
+  postData(item);
+ })
+
+ function postData(form){
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const statusMessage = document.createElement('div');
+    statusMessage.classList.add("status");
+    statusMessage.innerHTML = message.loading;
+    // statusMessage.style.fontSize = "px";  
+    statusMessage.style.background = "white";  
+    statusMessage.style.borderRadius = "7px"
+    statusMessage.style.margin = "5% 42%";
+    statusMessage.style.color = "#212F3C";
+      form.append(statusMessage)
+  });
+
+ const formData = new FormData(form);
+
+ const object = {};
+ formData.forEach(function(value,key){
+  object[key] = value;
+ });
+
+const json = JSON.stringify(object);
+
+const request = new XMLHttpRequest();
+request.open("POST", "server.php")
+request.setRequestHeader('Content-type', 'application/json');
+request.send(json);
+
+request.addEventListener('load', ()=>{
+  if(request.status === 200){
+    console.log(request.response);
+    statusMessage.innerHTML = message.success;
+    form.reset()
+    setTimeout(() => {
+      statusMessage.remove();
+    },1000);
+  }else{
+    statusMessage.innerHTML = message.failure;
+  }
+})
+ }
