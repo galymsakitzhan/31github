@@ -6,7 +6,7 @@
   font-family: 'Poppins',sans-serif;
 }
 body{
-  background: #85929E;
+  background-image: url(img/nature.jpg);
   overflow: hidden;
 }
 ::selection{
