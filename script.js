@@ -9,10 +9,13 @@ function headermobile(){
         closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
 }
 
+headermobile();
+
 
 function popUp(){
-  const order = document.querySelector("button");
-     order.addEventListener('click', () => {
-      console.log("Hello");
-     })
+  const order = document.querySelector("#submit");
+  const pop = document.querySelector('#pup_up');
+     order.addEventListener('click', () => pop.classList.toggle("add"));
 }
+
+popUp();
