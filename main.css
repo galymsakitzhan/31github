@@ -112,9 +112,11 @@ header .navbar {
 }
 
 .pup_up{
+  position: absolute;
   display: none;
-  width: 600px;
+  width: 450px;
   height: 280px;
+  margin: 0 60%;
   background: #ededed;
   border-radius:10px;
 }

@@ -13,9 +13,13 @@ headermobile();
 
 
 function popUp(){
-  const order = document.querySelector("#submit");
-  const pop = document.querySelector('#pup_up');
-     order.addEventListener('click', () => pop.classList.toggle("add"));
-}
+  const order = document.querySelector("#foder");
+  const pop = document.querySelector('.pup_up');
+     order.addEventListener("click", () => pop.classList.toggle("add"));
 
+  const ex = document.querySelector("#end");
+  ex.addEventListener("click", () => {
+    pop.classList.remove("add");
+  });
+}
 popUp();
