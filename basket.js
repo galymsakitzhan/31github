@@ -55,13 +55,18 @@ let prodcuts = [
 let listCards = [];
 
 const initApp = () => {
-  prodcuts.forEach(value,key) => {
+  prodcuts.forEach((value,key) => {
     let newDiv = document.createElement("div")
     newDiv.classList.add("item");
     newDiv.innerHTML = `
     <img src ="img/${value.images}">
     <div class ="title">${value.name}</div>
     <div class="price">${value.price.toLocaleString()}</div>
+    <button onclick="addToCard(${key}))"Add To Card</button>
     `
-  }
+
+    list.appendChild(newDiv);
+  })
 }
+
+initApp();
