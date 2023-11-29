@@ -59,7 +59,9 @@ const initApp = () => {
     let newDiv = document.createElement("div")
     newDiv.classList.add("item");
     newDiv.innerHTML = `
-    
+    <img src ="img/${value.images}">
+    <div class ="title">${value.name}</div>
+    <div class="price">${value.price.toLocaleString()}</div>
     `
   }
 }
