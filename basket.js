@@ -59,11 +59,11 @@ const initApp = () => {
     let newDiv = document.createElement("div")
     newDiv.classList.add("item");
     newDiv.innerHTML = `
-    <img src ="img/${value.images}" width="250px">
-    <div class ="title">${value.name}</div>
-    <div class="price">${value.price.toLocaleString()}</div>
-    <button onclick="addToCard(${key}))">Add To Card</button>
-    `
+  <img src="img/${value.images}" width="250px">
+  <div class="title">${value.name}</div>
+  <div class="price">${value.price.toLocaleString()}</div>
+  <button onclick="addToCard(${key})">Add To Card</button>
+`
 
     list.appendChild(newDiv);
   })
@@ -96,13 +96,9 @@ const reloadCard = () => {
         <div class="cardPrice">${value.price.toLocaleString()}</div>
 
         <div>
-          <button style="background-color: #560bad" 
-          class="cardButton" onclick = "changeQuantity(
-          ${key}, ${value.quantity - 1}")>-</button>
-          <div class = "count">${count}</div>
-          <button style="background-color: #560bad" 
-          class="cardButton" onclick = "changeQuantity(
-          ${key}, ${value.quantity + 1}")>+</button>
+        <button style="background-color: #560bad" class="cardButton" onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+        <div class="count">${count}</div>
+        <button style="background-color: #560bad" class="cardButton" onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>        
         </div>
       `
       listCard.appendChild(newDiv);
