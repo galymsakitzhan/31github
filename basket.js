@@ -21,31 +21,31 @@ let prodcuts = [
     price: 2000
   },
   {
-    id:1,
+    id:2,
     name:"Product 2",
     images:"charyn.jpg",
     price: 2300
   },
   {
-    id:1,
+    id:3,
     name:"Product 3",
     images:"desert.jpg",
     price: 1700
   },
   {
-    id:1,
+    id:4,
     name:"Product 4",
     images:"nature.jpg",
     price: 1000
   },
   {
-    id:1,
+    id:5,
     name:"Product 5",
     images:"nature2.jpg",
     price: 3000
   },
   {
-    id:1,
+    id:6,
     name:"Product 6",
     images:"beach.jpg",
     price: 2500
