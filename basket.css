@@ -33,8 +33,3 @@ body {
 #shopping-cart table tfoot td:last-child {
   font-weight: bold;
 }
-
-.card img{
-  width: 250px;
-  height: 300px;
-}

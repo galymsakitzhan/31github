@@ -8,7 +8,7 @@ $(document).ready(function() {
       let product = {
           id: productId,
           name: $(this).closest('.card-body').find('.card-title').text(),
-          price: 10.00,
+          price: parseInt($(this).closest('.card-body').find('.card-price').text()),
           quantity: 1
       };
 
@@ -39,7 +39,7 @@ $(document).ready(function() {
                   <td>${item.quantity}</td>
                   <td>$${total.toFixed(2)}</td>
                   <td>
-                      <button class="btn btn-sm btn-danger remove-from-cart" data-product-id="${item.id}">Remove</button>
+                      <button class="btn btn-sm btn-warning remove-from-cart" data-product-id="${item.id}">Remove</button>
                   </td>
               </tr>
           `;
