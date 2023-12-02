@@ -33,3 +33,15 @@ body {
 #shopping-cart table tfoot td:last-child {
   font-weight: bold;
 }
+
+.col-md-4 .card{
+  background-color: cadetblue;
+}
+
+.col-md-4 .card .card-body{
+  color: white;
+}
+
+.col-md-4{
+  border-radius: 15px;
+}
