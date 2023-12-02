@@ -83,7 +83,7 @@ request.addEventListener('load', ()=>{
       statusMessage.remove();
     },1000);
   }else{
-    statusMessage.innerHTML = message.failure;
+    // statusMessage.innerHTML = message.failure;
   }
 })
  }
