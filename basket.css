@@ -11,7 +11,7 @@ body {
 }
 
 #shopping-cart table {
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 #shopping-cart table th {
@@ -35,14 +35,14 @@ body {
 }
 
 .col-md-4 .card{
-  background-color: cadetblue;
+  background-color: rgb(24, 70, 71);
 }
 
 .col-md-4 .card .card-body{
-  color: white;
+  color: rgb(211, 210, 210);
 }
 
 .col-md-4{
-  /* border-radius: 50px; */
+  border-radius: 15px;
 }
 
